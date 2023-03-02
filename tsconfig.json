@@ -14,7 +14,8 @@
     "resolveJsonModule": true,
     "isolatedModules": true,
     "jsx": "preserve",
-    "baseUrl": "./",
+    "baseUrl": ".",
+    "strictNullChecks": true,
     "plugins": [
       {
         "name": "next"
@@ -23,7 +24,7 @@
     "paths": {
       "@/components/*": ["./components/*"],
       "@/hooks/*": ["./hooks/*"],
-      "@/lib/*": ["lib/*"],
+      "@/lib/*": ["./lib/*"],
       "@/styles/*": ["./styles/*"],
       "@/prisma/*": ["./prisma/*"],
       "@/assets/*": ["./assets/*"]
