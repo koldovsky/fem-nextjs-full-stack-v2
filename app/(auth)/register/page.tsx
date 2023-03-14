@@ -1,5 +1,9 @@
-const RegisterPage = () => {
-  return <div>Register</div>;
+import AuthForm from "@/components/Authform";
+
+const RegisterInPage = () => {
+  return <div>
+    <AuthForm mode="register" />
+  </div>;
 };
 
-export default RegisterPage;
+export default RegisterInPage;
