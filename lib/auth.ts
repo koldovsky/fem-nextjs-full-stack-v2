@@ -1,5 +1,6 @@
 import bcrypt from 'bcrypt';
-import { SignJWT, jwtVerify } from 'jose';
+import { jwtVerify,SignJWT } from 'jose';
+
 import { db } from './db';
 
 export const hashPassword = (password) => bcrypt.hash(password, 10);

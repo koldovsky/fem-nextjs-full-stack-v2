@@ -1,11 +1,12 @@
 "use client";
-import { register, signin } from "@/lib/api";
-import { useCallback, useState } from "react";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
+import { useCallback, useState } from "react";
 
-import Card from "./Card";
+import { register, signin } from "@/lib/api";
+
 import Button from "./Button";
+import Card from "./Card";
 import Input from "./Input";
 
 const registerContent = {
