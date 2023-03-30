@@ -8,6 +8,7 @@ export default async function signin(
   req: NextApiRequest,
   res: NextApiResponse
 ) {
+  console.log('signin');
   if (req.method === "POST") {
     const user = await db.user.findUnique({
       where: {
@@ -27,7 +28,7 @@ export default async function signin(
       const jwt = await createJWT(user);
       res.setHeader(
         "Set-Cookie",
-        serialize(process.env.COOKIE_NAME, jwt, {
+        serialize(process.env?.COOKIE_NAME, jwt, {
           httpOnly: true,
           path: "/",
           maxAge: 60 * 60 * 24 * 7,
