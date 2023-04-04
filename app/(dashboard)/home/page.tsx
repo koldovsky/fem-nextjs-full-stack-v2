@@ -8,9 +8,10 @@ import { getUserFromCookie } from "@/lib/auth";
 import { db } from "@/lib/db";
 import GreetingsSkeleton from "@/components/GreetingsSkeleton";
 import ProjectCard from "@/components/ProjectCard";
+import TaskCard from "@/components/TaskCard";
 
 const getData = async () => {
-  await delay(2000);
+  await delay(1000);
   const user = await getUserFromCookie(cookies());
   const projects = await db.project.findMany({
     where: {
@@ -48,7 +49,7 @@ export default async function Page() {
       </div>
       <div className="mt-6 flex-2 grow w-full flex">
         <div className="w-full">
-          {/* <TaskCard /> */}
+          <TaskCard />
         </div>
       </div>
     </div>
